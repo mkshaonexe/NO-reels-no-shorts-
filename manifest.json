@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "No Shorts & Reels",
+    "version": "1.0.3",
+    "description": "Completely removes YouTube Shorts and Facebook Reels",
+    "content_scripts": [
+      {
+        "matches": ["*://*.youtube.com/*"],
+        "js": ["youtube.js"],
+        "run_at": "document_end"
+      },
+      {
+        "matches": ["*://*.facebook.com/*"],
+        "js": ["facebook.js"],
+        "css": ["facebook.css"],
+        "run_at": "document_end"
+      }
+    ],
+    "host_permissions": [
+      "*://*.youtube.com/*",
+      "*://*.facebook.com/*"
+    ],
+    "permissions": ["storage"]
+  }
